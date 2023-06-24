@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+<!-- Main Code -->
+{% block content %}
+<div class="container">
+<div class="col-9">
+<!-- Searchbar -->
+<form class="searchbar" method="post">
+<input type="text" placeholder="Search by pet name...">
+<button>
+<img src="/static/images/search.png" height="18" alt="img2">
+</button>
+</form>
+{% include 'common/pets-posts.html' %}
+</div>
+</div>
+{% endblock %}
+© SoftUni – about.softuni.bg. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
+Follow us: Page 17 of 21
+Next, delete the pets' photos in the pet-details-page.html template and include the pets-post.html template:
+{% extends 'base.html' %}
+{% block content %}
+<div class="pet-profile">
+<div class="profile">
+<div class="profile-data">
+<div class="profile_img">
+<div class="image">
+<img src="https://encrypted-
+tbn0.gstatic.com/images?q=tbn:ANd9GcTgoIHq82qLYnvomfz5ZkW5CLQ8VNxCyI-hUw&usqp=CAU"
+alt="img8">
+</div>
+</div>
+<div class="personal">
+<div class="edit">
+<p>Sasho</p>
+<a href="">
+<img class="edit-img" src="/static/images/edit-pen-icon-
+6.jpg" alt="edit button">
+</a>
+<a href="">
+<img class="bin-img" src="/static/images/icon-remove-
+22.jpg" alt="bin button">
+</a>
+</div>
+<div class="data">
+<span>4</span>
+<p>photos</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pet-posts">
+<!-- Start if pet photos -->
+{% include 'common/pets-posts.html' %}
+<!-- End if pet photos -->
+<!-- Start if not pet photos -->
+<img class="no-posts" src="/static/images/no_posts.png" alt="no posts
+image">
+<!-- End if not pet photos -->
+</div>
+</div>
+{% endblock %}
+
+</body>
+</html>

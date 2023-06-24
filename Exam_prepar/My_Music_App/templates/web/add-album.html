@@ -1,0 +1,20 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+<!--Create Page-->
+{% block other_pages %}
+<section class="createPage">
+
+    <form method="post">
+        <fieldset>
+            <legend>Add Album</legend>
+            <div class="container">
+                {% csrf_token %}
+                {{ form }}
+                <!-- Button for Adding Album -->
+                <button class="add-album" type="submit">Add New Album</button>
+            </div>
+        </fieldset>
+    </form>
+</section>
+{% endblock %}

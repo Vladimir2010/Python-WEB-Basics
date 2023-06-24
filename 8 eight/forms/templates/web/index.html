@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+{% if name %}
+    <h1>Здравей {{ name }}</h1>
+{% else %}
+    <h1>Please enter your username</h1>
+{% endif %}
+
+<form action="{% url 'index' %}" method="get">
+    {{ form }}
+    <button type="submit">Submit</button>
+
+
+<p>CSRF TOKEN: {{ csrf_token }}</p>
+</form>
+</body>
+</html>
